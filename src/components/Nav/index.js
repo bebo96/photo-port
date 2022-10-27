@@ -9,8 +9,8 @@ function Nav() {
     { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' }
   ];
 
-  const handleClick = () => {
-    console.log("click handled")
+  const handleClick = (name) => {
+    console.log(`${name} clicked`)
   }
 
   return (
@@ -35,7 +35,7 @@ function Nav() {
           {
             categories.map((category) => (
               <li className="mx-1" key={category.name} >
-                <span onClick={() => { handleClick(); }}>
+                <span onClick={() => { handleClick(category.name); }}>
                  {capitalizeFirstLetter(category.name)}
                 </span>
               </li>
